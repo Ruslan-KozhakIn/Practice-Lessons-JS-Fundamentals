@@ -62,3 +62,18 @@ switch (weekday) {
         console.warn('Invalid weekday number!');
         
 }
+
+
+
+let mark = 'Excellent';
+
+switch (mark.toLowerCase()) {
+    case 'Bad':
+        break;  
+    case 'Good':
+        break;
+    case 'Excellent':
+        break;
+    default:
+        break;
+}
