@@ -69,7 +69,9 @@ console.log("Copied array:", copy);
 array = [4, 6, 8, 1, 13, 16, -4, 0, 99];
 
 const filtered = array.filter((el) => el % 2 == 0);
-console.log("Filtered array:", filtered); 
+console.log("Filtered array:", filtered);
+
+console.log("Reversed:", array.reverse()); 
 
 const colors = ['red', 'brown', 'yellow', 'green', 'purple'];
 
