@@ -78,3 +78,6 @@ changeArray(arr2, (n) => n -1);               //  using arrow
 
 console.log('arr 1 changed:', arr1);
 console.log('arr 2 changed:', arr2);
+
+
+function (a);   
