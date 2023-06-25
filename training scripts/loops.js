@@ -4,6 +4,7 @@
 
 // syntax: while(condition) {....code....}
 
+// Вічний цикл: цикл, в якого умова є завжди = true.
 
 // Вічний цикл
 // while (5 > 2) {
@@ -20,7 +21,7 @@ while (a < 10) { //condition
 
 console.warn("Finish!");
 
-// шдентичне до циклу while
+// ідентичне до циклу while
 //  For - syntax: (initialize; condition; expression) {.....code....}
 
 for (let i = 1; i < 10; i++) {
@@ -39,10 +40,13 @@ while (+prompt("Enter your number:") > 0) {
 
 //  do while(): - цикл з післяумовою
 // syntax: do while() {.....code....}
+//  Виконує код , а потім перевіряє , чи потрібно повторно виконувати.
 
 do {
     console.log("Request a user data...");
-}while (+prompt("Enter your number:") > 0) 
+} while (+prompt("Enter your number:") > 0) 
+
+
     
 
 // запросити введення числа, поки воно не буде позитивним
@@ -52,6 +56,17 @@ let number;
 do {
     number = +prompt("Enter a positive number:");
 } while (number < 0);
+
+console.log("Thanks!");
+
+// show collection of pairs  1-10, 2-9, 3-8
+
+for (let start = 1, end =10; start <= 10; start++,--end) {
+    console.log(`${start} - ${end}`);
+}
+    
+    
+
 
 // for in - iterate all object keys
 // syntax: for(variable in object) {}
@@ -68,10 +83,19 @@ for (let ind in array) {
 
 console.log('User properties:');
 for (const prop in user) {
-    console.log(prop);
-} 
+    console.log(`Property: ${prop}`);  // username,address, id.
+}  
+
+array[12] = 40;
+console.log('Array:', array);
+
 
 console.log('Array values:');
+for (let val of array) {
+    ++val; // Змінює копію масиву, не застосовується до оригіналу.
+    console.log("Value:", val);
+}
+
 
 let newArray = [];
 
@@ -90,13 +114,13 @@ for (let elem of array) {
 let prises = [];
 // додати в масив 10 цін з випадковим значенням від 0 до 100
 
-for (let i = 0; i < 10; ++i) {
-    let value = Math.floor(Math.random() * 100); // урізає дробову частку
+for (let i = 0; i < 3; ++i) {
+    let value = Math.floor(Math.random() * 100); // Math.floor урізає дробову частку
     prises.push(value); // [0...100] повертає випадкове число
 }
 
 for (const prise of prises) {
-    console.log(`Prises: ${prise}$`);
+    console.log(`Prise: ${prise}$`);
 }
 
 // get summ of all prises in the array
@@ -105,9 +129,51 @@ for (let i = 0; i < prises.length; ++i) {
     summa += prises[i];
   
 }
-console.log(`Total prises: ${summa}$`);
+console.log(`Total prise: ${summa}$`); 
 
 
+// get summ, when prise > 50.
+let summ = 0;// локально створена, для того щоб була одна змінна на всі іттерації , а не створювалася кожен раз нова з суммою (0).
+let count = 0;
+/*
+// 1 - USING 'FOR' LOOP
+for (let i = 0; i < prises.length; ++i) {
+
+    if (prises[i] > 50) {
+        summ += prises[i];
+        ++count;
+    }
+}
+console.log("Summ:", summ / count); // використали count для підрахунку середнього арифметичного */
+
+/*let summ = 0;// локально створена, для того щоб була одна змінна на всі іттерації , а не створювалася кожен раз нова з суммою (0).
+// 2 - USING 'FOR OF' LOOP
+for (const item of prises) {
+
+    if (item > 50) {
+        summ += item;
+    
+    }
+}
+console.log("Summ:", summ); */
+
+// 3 - USING 'forEach()' method in LOOP
+
+prises.forEach((item) => {
+    if (item > 50) 
+        summ += item;
+    
+});
+
+console.log("Summ:", summ);
+
+
+
+
+// Повторення теми циклів ********
+
+
+// Цикл For більш гнучкий.
 
 
 
