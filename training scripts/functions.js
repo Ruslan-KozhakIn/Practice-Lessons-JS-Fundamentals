@@ -215,3 +215,41 @@ changeArray(members, function (x) { return x * x; });
 changeArray(members, (x) => x * 2);
 
 console.log("Change array: ", members);
+
+
+
+// ---------- closure -----------
+
+function getFunction() {
+    // outer area
+
+    // create variables
+    let a = 0;
+    let b = 1;
+
+    return function () {
+        // inner area
+        console.log(a);
+        let temp = a;
+        a = b;
+        b += temp;
+
+    };
+
+}
+
+//  get closure function 
+const showNext = getFunction();
+
+for (let i = 0; i < 10; i++) {
+    showNext(); // invoke
+}
+
+
+
+
+
+
+
+
+

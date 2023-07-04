@@ -25,7 +25,11 @@ console.warn("Finish!");
 //  For - syntax: (initialize; condition; expression) {.....code....}
 
 for (let i = 1; i < 10; i++) {
- console.log(`[${i}] - One more iteration...`);   
+    if (i % 4 === 0) continue;
+    console.log(`[${i}] - One more iteration...`);
+    // break - end the loop;
+    // continue - skips current iteration
+    if (i % 7 === 0) break;
 }
 
 console.log(`a = ${a}`); // 10
