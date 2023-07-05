@@ -1,4 +1,4 @@
-.head-title {
+h1 {
     background-color: rgba(228, 152, 11, 0.712);
     border-radius: 5px;
     padding: 20px;
@@ -8,7 +8,7 @@
     font-size: 40px;
 }
 
-.head-descr {
+p,strong {
     background-color: rgb(182, 182, 182);
     margin: 0 auto;
     padding: 10px;
